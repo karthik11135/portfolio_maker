@@ -18,7 +18,9 @@ export type projectType = {
   projectName: string;
   projectLink: string;
 };
-export const projectsState = atom<projectType[]>([
- 
-]);
+export const projectsState = atom<projectType[]>([]);
 export const projectsLenState = atom((get) => get(projectsState).length);
+
+// theme webpage
+export const themeState = atom('ss');
+export const patternState = atom(false);

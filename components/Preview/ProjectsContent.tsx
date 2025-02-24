@@ -22,7 +22,7 @@ const ProjectsContent = () => {
                 href={val.projectLink}
                 key={id}
                 target="_blank"
-                className="rounded-lg transition hover:-translate-y-1 hover:-translate-x-2 hover:shadow-[7px_7px_0px_rgba(0,0,0,0.9)] mb-2 block font-bold px-4 py-2 w-full bg-blue-100 "
+                className="rounded-lg transition hover:-translate-y-1 hover:-translate-x-2 hover:shadow-[7px_7px_0px_rgba(0,0,0,0.9)] mb-2 block font-bold px-4 py-2 w-full bg-slate-200 "
               >
                 {val.projectName}
               </Link>

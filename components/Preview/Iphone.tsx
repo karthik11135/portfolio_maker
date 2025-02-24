@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Iphone = () => {
   return (
@@ -9,7 +9,7 @@ const Iphone = () => {
       <div className="h-16 w-3 absolute -left-4 top-44 bg-black rounded-md"></div>
       <div className="h-24 w-4 absolute -right-4 top-36 bg-black rounded-lg"></div>
     </>
-  )
-}
+  );
+};
 
-export default Iphone
+export default Iphone;

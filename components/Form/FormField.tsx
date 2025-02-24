@@ -27,7 +27,7 @@ const FormField = ({
   const [counter, setCounter] = useState(0);
 
   console.log('rendered');
-  const fieldChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const fieldChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (stateVal == projectsState) {
       if (id == undefined) return;
       let newProjVals = [...projectsValue];
@@ -43,8 +43,7 @@ const FormField = ({
       <div>
         <label className="font-medium tracking-tight text-sm ">{name}</label>{' '}
         <br />
-        {/* {JSON.stringify(projVal)} */}
-        <input
+        <textarea
           placeholder={placeHolderVal}
           onInput={fieldChangeHandler}
           value={
@@ -55,9 +54,8 @@ const FormField = ({
               : undefined
           }
           className="focus:outline-none border-zinc-300 placeholder:font-light placeholder:text-zinc-400 w-full border rounded-md py-1.5 px-2 text-black font-extralight placeholder:t-300"
-          // rows={lines ? lines : 1}
+          rows={lines ? lines : 1}
         />
-        {id}
       </div>
     </div>
   );
