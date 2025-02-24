@@ -16,7 +16,6 @@ const ThemeInfo = () => {
   const [pattern, setPattern] = useAtom(patternState);
 
   const changeThemeHandler = (id: number) => {
-    tempStore[id].tsName;
     setTheme(tempStore[id].tsName);
   };
 

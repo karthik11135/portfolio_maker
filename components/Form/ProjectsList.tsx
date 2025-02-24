@@ -7,9 +7,8 @@ import { useAtom } from 'jotai';
 
 const ProjectsList = () => {
   const [projectsVal, setProjects] = useAtom(projectsState);
-  projectsVal;
   const removeProjectHandler = (id: number) => {
-    let newProjVals = [...projectsVal];
+    const newProjVals = [...projectsVal];
     newProjVals.splice(id, 1);
     setProjects(newProjVals);
   };
@@ -24,7 +23,6 @@ const ProjectsList = () => {
               placeHolderVal="Social Media Application"
               className="col-span-1"
               stateVal={projectsState}
-              projVal={val}
               id={id}
             />
             <FormField
@@ -32,7 +30,6 @@ const ProjectsList = () => {
               placeHolderVal="https://example.com/"
               className="col-span-1"
               stateVal={projectsState}
-              projVal={val}
               id={id}
             />
             <div

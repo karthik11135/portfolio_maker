@@ -1,7 +1,5 @@
-import Image from 'next/image';
 import Preview from '@/components/Preview/Preview';
 import Form from '@/components/Form/Form';
-import { Modal } from '@/components/common/Modal';
 
 export default function Home() {
   return (

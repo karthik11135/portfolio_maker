@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import { useState } from 'react';
-import { useSetAtom, useAtomValue, useAtom } from 'jotai';
+import { useSetAtom, useAtomValue } from 'jotai';
 import Link from 'next/link';
 import {
   formState,

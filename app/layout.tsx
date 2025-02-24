@@ -1,8 +1,6 @@
-// "use client"
 import type { Metadata } from 'next';
 import { Figtree } from 'next/font/google';
 import './globals.css';
-// import { RecoilRoot } from 'recoil';
 import { Wrapper } from '@/components/common/RecoilWrapper';
 import { Modal } from '@/components/common/Modal';
 

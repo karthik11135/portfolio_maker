@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
-import { useAtom, useSetAtom } from 'jotai';
-import { nameState, projectType } from '../common/store/atoms';
+import { useAtom } from 'jotai';
+import {  projectType } from '../common/store/atoms';
 import { PrimitiveAtom } from 'jotai';
 import { projectsState } from '../common/store/atoms';
-import { useState } from 'react';
+
 
 const FormField = ({
   name,
@@ -12,7 +12,6 @@ const FormField = ({
   stateVal,
   placeHolderVal,
   lines,
-  projVal,
   id,
 }: {
   name: string;
@@ -20,17 +19,14 @@ const FormField = ({
   stateVal: PrimitiveAtom<string> | PrimitiveAtom<projectType[]>;
   placeHolderVal: string;
   lines?: number;
-  projVal?: projectType;
   id?: number;
 }) => {
   const [projectsValue, setVal] = useAtom(stateVal);
-  const [counter, setCounter] = useState(0);
 
-  ('rendered');
   const fieldChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (stateVal == projectsState) {
       if (id == undefined) return;
-      let newProjVals = [...projectsValue];
+      const newProjVals = [...projectsValue];
       if (name == 'Project Name')
         (newProjVals[id] as projectType)['projectName'] = e.target.value;
       else (newProjVals[id] as projectType)['projectLink'] = e.target.value;

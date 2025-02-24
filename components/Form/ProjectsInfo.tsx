@@ -1,6 +1,4 @@
 import React from 'react';
-import { projectsState } from '../common/store/atoms';
-import { useAtomValue } from 'jotai';
 import AddProjectsButton from './AddProjectsButton';
 import ProjectsList from './ProjectsList';
 

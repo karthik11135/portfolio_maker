@@ -1,15 +1,8 @@
 import React from 'react';
-import { useAtomValue } from 'jotai';
-import { patternState } from '../common/store/atoms';
-import Iphone from './Iphone';
 import Icons from '../common/Icons';
 import ProfileContent from './ProfileContent';
-import Link from 'next/link';
 import ProjectsContent from './ProjectsContent';
-import { cn } from '@/lib/utils';
-import { GridPattern } from '@/components/magicui/grid-pattern';
-import PreviewWrapper from './PreviewWrapper';
-import ShowCaseWrapper from './ShowCaseWrapper';
+
 
 const ShowCase = () => {
   return (

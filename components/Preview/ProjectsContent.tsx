@@ -5,7 +5,6 @@ import Link from 'next/link';
 import {
   projectsLenState,
   projectsState,
-  projectType,
 } from '../common/store/atoms';
 import { useGetParams } from '@/hooks/useGetParams';
 

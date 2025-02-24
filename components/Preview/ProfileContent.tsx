@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { useAtom, useAtomValue } from 'jotai';
+import {  useAtomValue } from 'jotai';
 import {
   aboutYouState,
   nameState,
@@ -14,7 +14,7 @@ const ProfileContent = () => {
   const nameValue = useAtomValue(nameState);
   const aboutYouVal = useAtomValue(aboutYouState);
   const profilePicVal = useAtomValue(profilePicState);
-  formObj?.name;
+
   return (
     <>
       <input
