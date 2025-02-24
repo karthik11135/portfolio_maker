@@ -54,7 +54,7 @@ const Publish = () => {
     setFormState(formValues);
 
     const encoded = encodeURIComponent(JSON.stringify(formValues));
-    setLinkEnd('http://localhost:3000/portfolio?data=' + encoded);
+    setLinkEnd('https://portfolio-maker-dusky.vercel.app/portfolio?data=' + encoded);
   };
 
   return (
