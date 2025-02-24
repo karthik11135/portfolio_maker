@@ -8,12 +8,12 @@ import {
 
 const ProfileInfo = () => {
   return (
-    <div className="mb-2 border border-zinc-300 py-7 px-5 rounded-lg">
-      <h1 className="font-bold text-2xl mb-0.5 tracking-tight">Profile Info</h1>
+    <div className="mb-2 border border-zinc-300 mx-2 md:mx-0 py-7 px-5 rounded-lg">
+      <h1 className="font-bold text-lg md:text-2xl mb-0.5 tracking-tight">Profile Info</h1>
       <p className="text-slate-700 font-extralight mb-3 trackin text-sm">
         Enter your profile details here
       </p>
-      <div className="grid grid-cols-2">
+      <div className="md:grid md:grid-cols-2">
         <FormField
           className="col-span-1"
           name="Name"
@@ -30,7 +30,7 @@ const ProfileInfo = () => {
           className="col-span-2"
           lines={3}
           name="About yourself"
-          placeHolderVal="https://example.com"
+          placeHolderVal="Write something about yourself"
           stateVal={aboutYouState}
         />
       </div>

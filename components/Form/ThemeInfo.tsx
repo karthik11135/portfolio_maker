@@ -16,14 +16,14 @@ const ThemeInfo = () => {
   const [pattern, setPattern] = useAtom(patternState);
 
   const changeThemeHandler = (id: number) => {
-    console.log(tempStore[id].tsName);
+    tempStore[id].tsName;
     setTheme(tempStore[id].tsName);
   };
 
   return (
-    <div className="mb-2 border border-zinc-300 py-7 px-5 rounded-lg">
+    <div className="mb-2 border border-zinc-300 mx-2 md:mx-0 py-7 px-5 rounded-lg">
       <div className="flex gap-3 items-center">
-        <h1 className="font-bold text-2xl mb-0.5 tracking-tight">
+        <h1 className="font-bold text-lg md:text-2xl mb-0.5 tracking-tight">
           Theme Selector
         </h1>
         <div>

@@ -4,6 +4,7 @@ import { Figtree } from 'next/font/google';
 import './globals.css';
 // import { RecoilRoot } from 'recoil';
 import { Wrapper } from '@/components/common/RecoilWrapper';
+import { Modal } from '@/components/common/Modal';
 
 const roboto = Figtree({
   weight: ['300', '400', '500', '700', '900'],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
         <Wrapper>{children}</Wrapper>
+        <Modal />
       </body>
     </html>
   );

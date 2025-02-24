@@ -14,7 +14,7 @@ const ProfileContent = () => {
   const nameValue = useAtomValue(nameState);
   const aboutYouVal = useAtomValue(aboutYouState);
   const profilePicVal = useAtomValue(profilePicState);
-  console.log(formObj?.name);
+  formObj?.name;
   return (
     <>
       <input

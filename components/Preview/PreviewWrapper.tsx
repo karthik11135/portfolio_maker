@@ -5,7 +5,6 @@ import { patternState, themeState } from '../common/store/atoms';
 import { GridPattern } from '../magicui/grid-pattern';
 import { cn } from '@/lib/utils';
 import { useGetParams } from '@/hooks/useGetParams';
-import ShowCase from './ShowCase';
 
 const PreviewWrapper = ({ children }: { children: React.ReactNode }) => {
   const themeVal = useAtomValue(themeState);
@@ -13,15 +12,18 @@ const PreviewWrapper = ({ children }: { children: React.ReactNode }) => {
   const formObj = useGetParams();
   const customClass = formObj
     ? `w-full h-full`
-    : 'w-[330px] h-[80vh] mt-16  border-[11px] border-black rounded-[2.8rem]';
-  //   const vals = ['bg-blue-100', 'bg-pink-100', 'bg-red-200', 'bg-red-100'];
-  console.log('from wrapper', formObj?.theme);
+    : 'w-[330px] h-[600px] mt-16  border-[11px] border-black rounded-[2.8rem]';
+
   return (
     <div
-      className={` ${customClass} mb-0 bg-gradient-to-b from-${
+      className={`${customClass} mb-0 bg-gradient-to-b from-${
         formObj?.theme || themeVal
-      }-200 to-white mx-auto relative pb-1`}
+      }-200  to-white mx-auto relative pb-1`}
     >
+      <span className="from-red-200"></span>
+      <span className=" from-blue-200 "></span>
+      <span className=" from-pink-200 "></span>
+      <span className=" from-zinc-200"></span>
       <div className="">
         {(formObj?.pattern || pattern) && (
           <GridPattern

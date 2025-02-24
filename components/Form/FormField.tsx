@@ -26,7 +26,7 @@ const FormField = ({
   const [projectsValue, setVal] = useAtom(stateVal);
   const [counter, setCounter] = useState(0);
 
-  console.log('rendered');
+  ('rendered');
   const fieldChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     if (stateVal == projectsState) {
       if (id == undefined) return;
@@ -43,6 +43,8 @@ const FormField = ({
       <div>
         <label className="font-medium tracking-tight text-sm ">{name}</label>{' '}
         <br />
+        <div className='flex'>
+
         <textarea
           placeholder={placeHolderVal}
           onInput={fieldChangeHandler}
@@ -53,9 +55,10 @@ const FormField = ({
               ? (projectsValue[id as number] as projectType)['projectLink']
               : undefined
           }
-          className="focus:outline-none border-zinc-300 placeholder:font-light placeholder:text-zinc-400 w-full border rounded-md py-1.5 px-2 text-black font-extralight placeholder:t-300"
+          className="focus:outline-none border-zinc-300 placeholder:font-light placeholder:text-zinc-400 flex-grow border rounded-md py-1.5 px-2 text-black font-extralight placeholder:t-300"
           rows={lines ? lines : 1}
         />
+        </div>
       </div>
     </div>
   );

@@ -52,3 +52,7 @@ export const formState = atom<formStateType>({
   lnLink: '',
   projects: [],
 });
+
+// Modal Opening
+export const modelState = atom(false)
+export const linkState = atom("")
