@@ -2,11 +2,18 @@
 import { useAtomValue } from 'jotai';
 import React from 'react';
 import Link from 'next/link';
-import { projectsLenState, projectsState } from '../common/store/atoms';
+import {
+  projectsLenState,
+  projectsState,
+  projectType,
+} from '../common/store/atoms';
+import { useGetParams } from '@/hooks/useGetParams';
 
 const ProjectsContent = () => {
-  const projects = useAtomValue(projectsState);
+  let projects = useAtomValue(projectsState);
+  const formObj = useGetParams();
   const projectsLen = useAtomValue(projectsLenState);
+  projects = formObj ? formObj.projects : projects;
   return (
     <div className="">
       {projectsLen != 0 && (
@@ -16,7 +23,7 @@ const ProjectsContent = () => {
       )}
       {projects.map((val, id) => {
         return (
-          <div key={id}>
+          <div className={`${formObj ? 'w-2/6' : 'w-full'} mx-auto`} key={id}>
             {val.projectName != '' && (
               <Link
                 href={val.projectLink}

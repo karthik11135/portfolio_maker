@@ -4,6 +4,7 @@ import ProfileInfo from './ProfileInfo'
 import SocialInfo from './SocialInfo'
 import ProjectsInfo from './ProjectsInfo'
 import ThemeInfo from './ThemeInfo'
+import Publish from './Publish'
 
 const Form = () => {
   return (
@@ -12,6 +13,7 @@ const Form = () => {
         <ThemeInfo />
         <SocialInfo />
         <ProjectsInfo />
+        <Publish />
     </div>
   )
 }

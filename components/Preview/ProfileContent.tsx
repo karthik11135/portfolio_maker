@@ -7,11 +7,14 @@ import {
   profilePicState,
 } from '../common/store/atoms';
 
+import { useGetParams } from '@/hooks/useGetParams';
+
 const ProfileContent = () => {
+  const formObj = useGetParams();
   const nameValue = useAtomValue(nameState);
   const aboutYouVal = useAtomValue(aboutYouState);
   const profilePicVal = useAtomValue(profilePicState);
-
+  console.log(formObj?.name);
   return (
     <>
       <input
@@ -20,10 +23,18 @@ const ProfileContent = () => {
         width={55}
         height={55}
         type="image"
-        src={profilePicVal == '' ? '/np.webp' : profilePicVal}
+        src={
+          profilePicVal == ''
+            ? '/np.webp'
+            : formObj?.profileUrl || profilePicVal
+        }
       />
-      <h1 className="font-bold tracking-tight mb-1 text-3xl">{nameValue}</h1>
-      <p className="font-extralight text-md tracking-tighter">{aboutYouVal}</p>
+      <h1 className="font-bold z-10 tracking-tight mb-1 text-3xl">
+        {formObj?.name || nameValue}
+      </h1>
+      <p className="font-extralight z-10 text-md tracking-tighter">
+        {formObj?.aboutYou || aboutYouVal}
+      </p>
     </>
   );
 };

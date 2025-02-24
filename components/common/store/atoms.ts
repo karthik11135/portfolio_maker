@@ -24,3 +24,31 @@ export const projectsLenState = atom((get) => get(projectsState).length);
 // theme webpage
 export const themeState = atom('ss');
 export const patternState = atom(false);
+
+//entire state
+export type formStateType = {
+  name: string;
+  profileUrl: string;
+  aboutYou: string;
+  pattern: boolean;
+  theme: string;
+  fbLink: string;
+  twLink: string;
+  ghLink: string;
+  igLink: string;
+  lnLink: string;
+  projects: projectType[];
+};
+export const formState = atom<formStateType>({
+  name: '',
+  profileUrl: '',
+  aboutYou: '',
+  pattern: false,
+  theme: '',
+  fbLink: '',
+  twLink: '',
+  ghLink: '',
+  igLink: '',
+  lnLink: '',
+  projects: [],
+});

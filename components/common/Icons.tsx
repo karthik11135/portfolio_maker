@@ -17,6 +17,7 @@ import {
   lnLinkState,
 } from './store/atoms';
 import Link from 'next/link';
+import { useGetParams } from '@/hooks/useGetParams';
 
 const Icons = () => {
   const fbLink = useAtomValue(fbLinkState);
@@ -24,31 +25,32 @@ const Icons = () => {
   const twLink = useAtomValue(twLinkState);
   const ghLink = useAtomValue(ghLinkState);
   const lnLink = useAtomValue(lnLinkState);
+  const formObj = useGetParams();
 
   return (
     <div className="flex gap-3 w-fit mx-auto ">
-      {igLink && (
-        <Link target="_blank" href={igLink}>
+      {(formObj?.igLink || igLink) && (
+        <Link target="_blank" href={formObj?.igLink || igLink}>
           <FaInstagram size={20} />
         </Link>
       )}
-      {fbLink && (
-        <Link target="_blank" href={fbLink}>
+      {(formObj?.fbLink || fbLink) && (
+        <Link target="_blank" href={formObj?.fbLink || fbLink}>
           <FaFacebook size={20} />
         </Link>
       )}
-      {ghLink && (
-        <Link target="_blank" href={ghLink}>
+      {(formObj?.ghLink || ghLink) && (
+        <Link target="_blank" href={formObj?.ghLink || ghLink}>
           <FaGithub size={20} />
         </Link>
       )}
-      {twLink && (
-        <Link target="_blank" href={twLink}>
+      {(formObj?.twLink || twLink) && (
+        <Link target="_blank" href={formObj?.twLink || twLink}>
           <FaTwitter size={20} />
         </Link>
       )}
-      {lnLink && (
-        <Link target="_blank" href={lnLink}>
+      {(formObj?.lnLink || lnLink) && (
+        <Link target="_blank" href={formObj?.lnLink || lnLink}>
           <FaLinkedin size={20} />
         </Link>
       )}
