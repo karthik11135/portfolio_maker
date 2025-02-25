@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {  useAtomValue } from 'jotai';
+import { useAtomValue } from 'jotai';
 import {
   aboutYouState,
   nameState,
@@ -25,7 +25,7 @@ const ProfileContent = () => {
         type="image"
         src={
           profilePicVal == ''
-            ? '/np.webp'
+            ?  formObj?.profileUrl || '/np.webp'
             : formObj?.profileUrl || profilePicVal
         }
       />
