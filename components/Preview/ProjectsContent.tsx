@@ -14,7 +14,7 @@ const ProjectsContent = () => {
   const projectsLen = useAtomValue(projectsLenState);
   projects = formObj ? formObj.projects : projects;
   return (
-    <div className="">
+    <div className="no-scroll">
       {projectsLen != 0 && (
         <h1 className="mx-1 text-lg mb-2 font-medium uppercase tracking-wide">
           My Projects
